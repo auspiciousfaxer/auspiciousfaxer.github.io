@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>common app helper</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                font-family: Times New Roman, sans-serif;
+                text-align: left;
+            }
+            
+            h1 {
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                color: #f2eecb;
+            }
+
+            h2 {
+                display: block;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            .coollinkz {
+                list-style: none;
+                padding: 0;
+                display: inline;
+                margin: 0;
+            }
+            .coollinkz li {
+                display: inline-block;
+            }
+
+            .coollinkz a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .coollinkz a:hover {
+                border-bottom: 1px solid white;
+            }
+            .rainbowtext {
+              background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              animation: rainbowAnimation 5s linear infinite;
+            display: inline;
+            }
+
+            @keyframes rainbowAnimation {
+              0% {
+                background-position: 0% 50%;
+              }
+              100% {
+                background-position: 100% 50%;
+              }
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1>Common App Activities List Helper</h1>
+        <br>
+        fitting your common app activities descriptions into 150 characters can be tricky
+        <br>
+        <br>
+        this program <div class=rainbowtext><i>magically</i></div> shortens the activity descriptions in your activities list
+        <br>
+        <br>
+        <br>
+        <label for="textInput">Activity description:</label>
+        <input type="text" id="inputString">
+        <button onclick="vowelAnnihilator()">ANNIHILATE</button>
+        <p id="result"></p>
+        <script>
+          function vowelAnnihilator() {
+            const inputElement = document.getElementById("inputString");
+            const resultElement = document.getElementById("result");
+            const inputString = inputElement.value;
+            const modifiedString = inputString.replace(/and/g, "&");
+            const finalString = modifiedString.charAt(0) +
+                                modifiedString.slice(1).replace(/[aeiou]/gi, "");
+            resultElement.textContent = finalString;
+          }
+        </script>
+        <br>
+        <ul class="coollinkz">
+            <struct>
+                <a href=programming.html>← back to programming</a>
+            </struct>
+        </ul>
+    </body>
+</html>

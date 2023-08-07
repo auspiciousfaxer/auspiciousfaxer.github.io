@@ -72,20 +72,23 @@
         <br>
         <br>
         <br>
-        <label for="textInput">Activity description:</label>
-        <input type="text" id="inputString">
+        <label for="inputText">Activity description:</label>
+        <input type="text" id="inputText">
         <button onclick="vowelAnnihilator()">ANNIHILATE</button>
-        <p id="result"></p>
+        <p id="output"></p>
         <script>
           function vowelAnnihilator() {
-            const inputElement = document.getElementById("inputString");
-            const resultElement = document.getElementById("result");
-            const inputString = inputElement.value;
-            const modifiedString = inputString.replace(/and/g, "&");
-            const finalString = modifiedString.charAt(0) +
-                                modifiedString.slice(1).replace(/[aeiou]/gi, "");
-            resultElement.textContent = finalString;
+              const input = document.getElementById("inputText").value;
+              const words = input.split(" ");
+              let output = "";
+              for (let word of words) {
+                const modifiedWord = word.charAt(0) + word.slice(1).replace(/[aeiouAEIOU]/g, "");
+                const finalWord = modifiedWord.replace(/and/g, "&");
+                output += finalWord + " ";
+              }
+              document.getElementById("output").textContent = output;
           }
+            
         </script>
         <br>
         <ul class="coollinkz">

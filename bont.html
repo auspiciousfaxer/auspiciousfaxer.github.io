@@ -11,15 +11,6 @@
                 text-align: left;
             }
             
-            @font-face {
-                font-family: 'Bont'; /* Choose a name for your font */
-                src: url('Boats-Regular.ttf') format('bont'),
-            }
-            
-            bontDisplay {
-                font-family: 'Bont', sans-serif;
-            }
-            
             h1 {
                 display: block;
                 font-size: 24px;
@@ -27,10 +18,13 @@
                 color: #f2eecb;
             }
 
+            @font-face {
+                font-family: 'Bont'; /* Choose a name for your font */
+                src: url('Boats-Regular.ttf') format('truetype'),
+            }
+            
             h2 {
-                display: block;
-                font-size: 20px;
-                font-weight: bold;
+                font-family: 'Bont', sans-serif;
             }
             
             .coollinkz {
@@ -60,7 +54,8 @@
         have you ever wanted to type using twenty-six different boat drawings? me too! I created bont (boat font) to do just that, for all your shipposting needs. you'll wish you had found this schooner
     </body>
     <br>
-    <bontDisplay>the quick brown fox jumps over the lazy dog</bontDisplay>
+    <h2>the quick brown fox jumps over the lazy dog</h2>
+    <br>
     <ul class="coollinkz">
         <struct>
             <a href=programming.html>← back to programming</a>
